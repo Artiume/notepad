@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/yduVWCu.png" height="120" />
+  <img src="https://i.imgur.com/IoHETwA.png" height="120" />
 </p>
 
 **⚠️ Warning: Notepad is currently a Work-In-Progress (WIP), as a project of [@danteissaias](https://github.com/danteissaias). Until we release a first stable version, the project software may not actually be buildable.**
