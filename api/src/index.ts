@@ -7,6 +7,7 @@ import { sequelize } from "./lib/sequelize"
 import { articles } from "./routes/articles"
 import { auth } from "./routes/auth"
 import { users } from "./routes/users"
+import { setup } from "./routes/setup"
 
 const app = express()
 
@@ -17,6 +18,7 @@ app.use(morgan("dev"))
 app.use("/api/users", users)
 app.use("/api/auth", auth)
 app.use("/api/articles", articles)
+app.use("/api/setup", setup)
 
 app.listen(8080, async err => {
   if (err) { throw err } // prettier-ignore
