@@ -2,6 +2,8 @@
   <img src="https://i.imgur.com/yduVWCu.png" height="120" />
 </p>
 
+**⚠️ Warning: Notepad is currently a Work-In-Progress (WIP), as a project of [@danteissaias](https://github.com/danteissaias). Until we release a first stable version, the project software may not actually be buildable.**
+
 Notepad provides a painless interface for publishing professional articles. It exposes a minimalist user interface for editing and publishing articles using markdown formatting.
 
 Notepad is written in NodeJS and is extremely efficient. It's lightweight and can be installed with a few commands on **all** server environments through the power of Docker.
