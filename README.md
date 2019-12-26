@@ -93,6 +93,11 @@ We use Prettier to format Notepad. Prettier has been configured per our personal
 
 We use ESLint to lint Notepad. ESLint has been configured to match the styling options defined in `.prettierrc`. A selection of other rules such as `eslint-plugin-import/sort-imports` have also been configured. When developing Notepad, it's recommended to find a plugin for your editor that displays linting issues inline as this helps bring your attention to issues.
 
+## Attributions
+
+- Architecture: [nice-boys/product-boilerplate](https://github.com/nice-boys/product-boilerplate)
+- Design: [rauchg/blog](https://github.com/rauchg/blog)
+
 ## License
 
 Notepad is licensed under [the MIT license](LICENSE.md).
