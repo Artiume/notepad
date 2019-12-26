@@ -80,6 +80,7 @@ There is currently no official Notepad image on the Docker Hub. To run Notepad w
 Notepad is structured as a monorepo using yarn workspaces. The workspaces that have been configured are as follows:
 
 `ui` - This workspace contains all frontend code.
+
 `api` - This workspace contains all backend code.
 
 ### Formatting
