@@ -7,7 +7,7 @@ import { AuthStore } from "../store/auth"
 class MyApp extends App {
   state = {
     store: new Store(),
-    auth: new AuthStore()
+    auth: new AuthStore(),
   }
 
   // Fetching serialized(JSON) store state
@@ -17,7 +17,7 @@ class MyApp extends App {
 
     return {
       ...appProps,
-      initialStoreState
+      initialStoreState,
     }
   }
 

@@ -28,7 +28,7 @@ const Slug = () => {
       }
 
       return "" // use external default escaping
-    }
+    },
   })
   const { store } = useStores()
   const router = useRouter()

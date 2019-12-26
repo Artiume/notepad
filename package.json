@@ -11,7 +11,7 @@
   },
   "scripts": {
     "prettier": "prettier",
-    "prettify": "prettier --write",
+    "prettify": "prettier --write **/*.tsx **/*.js **/*.ts **/*.json",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx ui api",
     "dev": "concurrently -n api,ui \"yarn workspace api dev\" \"yarn workspace ui dev\""
   },
