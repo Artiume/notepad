@@ -1,5 +1,5 @@
-import React from "react"
 import { action, computed, observable } from "mobx"
+import React from "react"
 import { login } from "../lib/login"
 
 export class AuthStore {

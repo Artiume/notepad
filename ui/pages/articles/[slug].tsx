@@ -1,13 +1,13 @@
-import React from "react"
+import hljs from "highlight.js"
 import { observer } from "mobx-react"
 import moment from "moment"
-import title from "title"
 import { useRouter } from "next/router"
+import React from "react"
 import { Remarkable } from "remarkable"
-import hljs from "highlight.js"
+import title from "title"
 import "highlight.js/styles/github.css"
-import Meta from "../../components/meta"
 import Logo from "../../components/logo"
+import Meta from "../../components/meta"
 import { useStores } from "../../store"
 
 const Slug = () => {

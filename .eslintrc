@@ -1,7 +1,13 @@
 {
   "parser": "@typescript-eslint/parser",
   "env": { "node": true, "browser": true, "es6": true },
-  "parserOptions": { "project": "./tsconfig.json" },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",

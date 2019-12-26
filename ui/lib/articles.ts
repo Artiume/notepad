@@ -1,4 +1,5 @@
 import fetch from "isomorphic-unfetch"
+
 const isServer = typeof window === "undefined"
 
 export const articles = () =>

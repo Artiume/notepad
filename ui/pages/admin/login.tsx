@@ -1,8 +1,8 @@
-import React from "react"
 import { observer } from "mobx-react"
-import { useStores } from "../../store"
-import Meta from "../../components/meta"
 import Router from "next/router"
+import React from "react"
+import Meta from "../../components/meta"
+import { useStores } from "../../store"
 
 const Login = () => {
   const { auth } = useStores()

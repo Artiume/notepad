@@ -1,6 +1,6 @@
+import { Provider } from "mobx-react"
 import App from "next/app"
 import React from "react"
-import { Provider } from "mobx-react"
 import { fetchInitialStoreState, Store } from "../store"
 import { AuthStore } from "../store/auth"
 

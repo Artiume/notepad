@@ -1,8 +1,6 @@
-import { hash } from "argon2"
 import { Router } from "express"
-import { BAD_REQUEST, CREATED, OK } from "http-status-codes"
+import { OK } from "http-status-codes"
 
-import { ERRORS } from "../constants"
 import { User } from "../models/User"
 
 export const setup = Router()
