@@ -7339,6 +7339,7 @@ __metadata:
     eslint-plugin-import: 2.19.1
     eslint-plugin-react: ^7.17.0
     prettier: ^1.19.1
+    react: ^16.12.0
     typescript: ^3.7.4
     webpack: ^4.41.4
   languageName: unknown
