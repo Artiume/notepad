@@ -1,0 +1,28 @@
+{
+  "name": "notepad",
+  "private": true,
+  "repository": "https://github.com/notepad/notepad",
+  "author": "Dante Issaias <dante@issaias.net>",
+  "workspaces": {
+    "packages": [
+      "api",
+      "ui"
+    ]
+  },
+  "scripts": {
+    "prettier": "prettier",
+    "prettify": "prettier --write",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx ui api",
+    "dev": "concurrently -n api,ui \"yarn workspace api dev\" \"yarn workspace ui dev\""
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "concurrently": "^5.0.2",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.8.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-import": "2.19.1",
+    "prettier": "^1.19.1"
+  }
+}

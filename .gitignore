@@ -1,0 +1,16 @@
+node_modules
+.vscode/
+.DS_Store
+npm-debug.log
+*.log
+Untitled*
+.idea
+.env
+
+# api
+api/database/
+api/config.json
+api/dist
+
+# ui
+ui/.next
