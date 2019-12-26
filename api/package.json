@@ -6,11 +6,12 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.json",
-    "dev": "NODE_ENV=development ts-node src/index.ts",
+    "dev": "NODE_ENV=development yarn pnpify ts-node src/index.ts",
     "start": "node dist/index.js",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@yarnpkg/pnpify": "^2.0.0-rc.12",
     "argon2": "^0.24.1",
     "bluebird": "^3.5.5",
     "body-parser": "^1.19.0",

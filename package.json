@@ -3,12 +3,10 @@
   "private": true,
   "repository": "https://github.com/notepad/notepad",
   "author": "Dante Issaias <dante@issaias.net>",
-  "workspaces": {
-    "packages": [
-      "api",
-      "ui"
-    ]
-  },
+  "workspaces": [
+    "api",
+    "ui"
+  ],
   "scripts": {
     "prettier": "prettier",
     "prettify": "prettier --write **/*.tsx **/*.js **/*.ts **/*.json",
@@ -25,6 +23,11 @@
     "eslint-config-prettier": "^6.8.0",
     "eslint-loader": "^3.0.2",
     "eslint-plugin-import": "2.19.1",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.4"
+  },
+  "dependencies": {
+    "@yarnpkg/pnpify": "^2.0.0-rc.12"
   }
 }

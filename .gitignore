@@ -7,6 +7,10 @@ Untitled*
 .idea
 .env
 
+# yarn
+**/.pnp.js
+**/.yarn
+
 # api
 api/database/
 api/config.json
