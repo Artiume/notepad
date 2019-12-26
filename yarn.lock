@@ -3953,6 +3953,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"doctrine@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "doctrine@npm:2.1.0"
+  dependencies:
+    esutils: ^2.0.2
+  checksum: d4c561a8c3b9502e7600f2610b561f1a58ebd2cf6928b8421fab67f28a87268b09bd979a4ccbdafc9820ec2839e826ef40f15e23a19d39c161f542ee68fc3487
+  languageName: node
+  linkType: hard
+
 "doctrine@npm:^3.0.0":
   version: 3.0.0
   resolution: "doctrine@npm:3.0.0"
@@ -4227,6 +4236,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-eslint-plugin@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "eslint-plugin-eslint-plugin@npm:2.1.0"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 57fef6ed2292c68a0f7e4d3795431b94cb9fd16ccc31bed7609833ecc2e7dad077a5c23fe62d95e0c5af25bc4e890b03449de0ad41f71122b77fbfcb83faf67c
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-import@npm:2.19.1":
   version: 2.19.1
   resolution: "eslint-plugin-import@npm:2.19.1"
@@ -4246,6 +4264,26 @@ __metadata:
   peerDependencies:
     eslint: 2.x - 6.x
   checksum: debe105aa46d63fb336817e241c401867890c3954ff6e667ecfa986ac9974dbbdf6044d2c9f0921d92a4d81c7e8daaf048b922f8c6f6bb4acd1290be35fb4ab5
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-react@npm:^7.17.0":
+  version: 7.17.0
+  resolution: "eslint-plugin-react@npm:7.17.0"
+  dependencies:
+    array-includes: ^3.0.3
+    doctrine: ^2.1.0
+    eslint-plugin-eslint-plugin: ^2.1.0
+    has: ^1.0.3
+    jsx-ast-utils: ^2.2.3
+    object.entries: ^1.1.0
+    object.fromentries: ^2.0.1
+    object.values: ^1.1.0
+    prop-types: ^15.7.2
+    resolve: ^1.13.1
+  peerDependencies:
+    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+  checksum: ce5e3d702fd5dabc47e146fc5e785d5c8a248a622c8f5ebdf0c81db733cf1728eb86ae2b4d1fa300afad7d990c4f237366dc6bd0eded265ffbfb2905ff1c0b83
   languageName: node
   linkType: hard
 
@@ -6140,6 +6178,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsx-ast-utils@npm:^2.2.3":
+  version: 2.2.3
+  resolution: "jsx-ast-utils@npm:2.2.3"
+  dependencies:
+    array-includes: ^3.0.3
+    object.assign: ^4.1.0
+  checksum: ad81abcb428a27e80609b61720f654e6f06324f9ef82e742f9ad2a2e82a26126bae1fc0d72636e66fde835d24f1c256e6e26f6f0f876aac3556addb824f833a0
+  languageName: node
+  linkType: hard
+
 "jwa@npm:^1.4.1":
   version: 1.4.1
   resolution: "jwa@npm:1.4.1"
@@ -7289,6 +7337,7 @@ __metadata:
     eslint-import-resolver-node: ^0.3.2
     eslint-loader: ^3.0.2
     eslint-plugin-import: 2.19.1
+    eslint-plugin-react: ^7.17.0
     prettier: ^1.19.1
     typescript: ^3.7.4
     webpack: ^4.41.4
@@ -7427,6 +7476,30 @@ __metadata:
     has-symbols: ^1.0.0
     object-keys: ^1.0.11
   checksum: 4d9f508c190f32772b3527918e000d401ca1e7b70dbfe697bd3820c1f181f582ea8c8419bb492e692c5ad39ae4b648e1172fa35f57ece7d869bee3a8b7983f23
+  languageName: node
+  linkType: hard
+
+"object.entries@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "object.entries@npm:1.1.1"
+  dependencies:
+    define-properties: ^1.1.3
+    es-abstract: ^1.17.0-next.1
+    function-bind: ^1.1.1
+    has: ^1.0.3
+  checksum: f4619cc514502b7cbb70645ed21b858d05b8fea10e812d27840a3e5dab80a24a028dc0c6f33e5ffe8cab9bdea70eafe244fbd814d458bce9e0ad94b9225ee1b7
+  languageName: node
+  linkType: hard
+
+"object.fromentries@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "object.fromentries@npm:2.0.2"
+  dependencies:
+    define-properties: ^1.1.3
+    es-abstract: ^1.17.0-next.1
+    function-bind: ^1.1.1
+    has: ^1.0.3
+  checksum: e93f95251fb597a5ca860276b91b635e43520bf456c520598556074ddcbae13295fa960ac2bd424abe1719eab5d1acc4d2c9e677bae9fe093ddbed524bccb4df
   languageName: node
   linkType: hard
 
@@ -8515,7 +8588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.7.2, prop-types@npm:^15.5.4, prop-types@npm:^15.6.2":
+"prop-types@npm:15.7.2, prop-types@npm:^15.5.4, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -9088,7 +9161,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.10.0, resolve@npm:^1.12.0, resolve@npm:^1.3.2, resolve@npm:^1.5.0, resolve@npm:^1.8.1":
+"resolve@npm:^1.10.0, resolve@npm:^1.12.0, resolve@npm:^1.13.1, resolve@npm:^1.3.2, resolve@npm:^1.5.0, resolve@npm:^1.8.1":
   version: 1.14.1
   resolution: "resolve@npm:1.14.1"
   dependencies:
