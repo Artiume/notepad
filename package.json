@@ -13,7 +13,9 @@
     "prettier": "prettier",
     "prettify": "prettier --write **/*.tsx **/*.js **/*.ts **/*.json",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx ui api",
-    "dev": "concurrently -n api,ui \"yarn workspace api dev\" \"yarn workspace ui dev\""
+    "dev": "concurrently -n api,ui \"yarn workspace api dev\" \"yarn workspace ui dev\"",
+    "build": "concurrently -n api,ui \"yarn workspace api build\" \"yarn workspace ui build\"",
+    "start": "concurrently -n api,ui \"yarn workspace api start\" \"yarn workspace ui start\""
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.9.0",
