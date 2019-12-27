@@ -1,49 +1,61 @@
-import hljs from "highlight.js"
+// External
 import { observer } from "mobx-react"
 import moment from "moment"
 import { useRouter } from "next/router"
 import React from "react"
 import { Remarkable } from "remarkable"
-import title from "title"
-import Logo from "../../components/logo"
-import Meta from "../../components/meta"
+import styled from "styled-components"
+import * as titleize from "title"
+
+// Local
+import { Logo, Meta, Main, Article, A } from "../../components"
 import { useStores } from "../../store"
+import highlight from "../../utils/highlight"
 
+// Components
+const Date = styled.span({
+  marginBottom: 20,
+  display: "block",
+  color: "rgb(119, 119, 119)",
+})
+
+const Title = styled.h1({
+  font: `500 18px Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif`,
+  marginTop: 0,
+  marginBottom: 10,
+})
+
+// Page
 const Slug = () => {
-  const md = new Remarkable({
-    highlight: function(str, lang) {
-      if (lang && hljs.getLanguage(lang)) {
-        try {
-          return hljs.highlight(lang, str).value
-        } catch (err) {
-          console.log("Could not highlight.")
-        }
-      }
-
-      try {
-        return hljs.highlightAuto(str).value
-      } catch (err) {
-        console.log("Could not auto highlight.")
-      }
-
-      return "" // use external default escaping
-    },
-  })
+  // "Hooks"
+  const md = new Remarkable({ highlight })
   const { store } = useStores()
   const router = useRouter()
+
+  // Article
   const article = store.articles.filter(article => article.slug === router.query.slug)[0]
+  const { title, content, createdAt } = article
+
+  // Processed article
+  const rendered = { __html: md.render(content) }
+  const timeFormatted = moment(createdAt).format("MMMM DD, YYYY")
+  const timeFromNow = moment(createdAt).fromNow()
 
   return (
-    <main>
-      <Meta />
+    <Main>
+      <Meta title={article.title} />
       <Logo />
 
-      <article>
-        {/*prettier-ignore*/}
-        <h1><a href="#">{title(article.title)}</a></h1>
-        <span>{moment(article.createdAt).format("MMMM DD, YYYY")}</span>
-        <div dangerouslySetInnerHTML={{ __html: md.render(article.content) }} />
-      </article>
+      <Article>
+        <Title>
+          <A href="#">{titleize(title)}</A>
+        </Title>
+
+        <Date>
+          {timeFormatted} ({timeFromNow})
+        </Date>
+        <div dangerouslySetInnerHTML={rendered} />
+      </Article>
 
       <style jsx global>{`
         p {
@@ -58,47 +70,7 @@ const Slug = () => {
           font-size: 12px;
         }
       `}</style>
-
-      <style jsx>{`
-        main {
-          padding: 25px 50px;
-        }
-
-        @media (max-width: 800px) {
-          main {
-            padding: 25px;
-          }
-        }
-
-        article {
-          max-width: 650px;
-          margin: auto;
-          font-size: 14px;
-        }
-
-        h1 {
-          font: 500 18px Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif;
-          margin-top: 0;
-          margin-bottom: 10px;
-        }
-
-        span {
-          margin-bottom: 20px;
-          display: block;
-          color: rgb(119, 119, 119);
-        }
-
-        a {
-          text-decoration: none;
-          color: #0070f3;
-        }
-
-        a:hover {
-          background: #0070f3;
-          color: white;
-        }
-      `}</style>
-    </main>
+    </Main>
   )
 }
 

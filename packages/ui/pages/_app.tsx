@@ -1,15 +1,13 @@
+// External
 import { Provider } from "mobx-react"
 import App from "next/app"
 import React from "react"
 import { ThemeProvider } from "styled-components"
+
+// Local
 import { fetchInitialStoreState, Store } from "../store"
 import { AuthStore } from "../store/auth"
-
-const theme = {
-  colors: {
-    primary: "#0070f3",
-  },
-}
+import { theme } from "../utils/theme"
 
 class MyApp extends App {
   state = {
@@ -29,8 +27,10 @@ class MyApp extends App {
   }
 
   static getDerivedStateFromProps(props, state) {
+    // Hydrate stores
     state.store.hydrate(props.initialStoreState)
     state.auth.hydrate(props.initialStoreState)
+
     return state
   }
 
