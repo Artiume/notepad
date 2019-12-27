@@ -1,6 +1,7 @@
 import config from "../config.json"
+import { Config } from "./interfaces/config"
 
-export const CONFIG = config
+export const CONFIG: Config = config as Config
 
 export const ERRORS = {
   INVALID_AUTHORIZATION: {
