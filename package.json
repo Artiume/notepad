@@ -28,6 +28,7 @@
     "eslint-plugin-import": "2.19.1",
     "eslint-plugin-react": "^7.17.0",
     "husky": "^4.0.0-beta.1",
+    "lint-staged": "notepad/lint-staged",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "typescript": "^3.7.4"
