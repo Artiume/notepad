@@ -4,7 +4,10 @@ about: Create a report to help us improve
 title: "[Bug]"
 labels: bug
 assignees: ""
----[ ] - This issue is reproduceable on the master branch.
+
+---
+
+- [ ] - This issue is reproduceable on the master branch.
 
 **Describe the bug**
 A clear and concise description of what the bug is.
