@@ -12,9 +12,9 @@ Untitled*
 **/.yarn
 
 # api
-api/database/
-api/config.json
-api/dist
+packages/api/database/
+packages/api/config.json
+packages/api/dist
 
 # ui
-ui/.next
+packages/ui/.next
