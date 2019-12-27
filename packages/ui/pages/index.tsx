@@ -3,6 +3,7 @@ import moment from "moment"
 import Link from "next/link"
 import React from "react"
 import title from "title"
+import { A } from "../components/link"
 import Logo from "../components/logo"
 import Meta from "../components/meta"
 import { useStores } from "../store"
@@ -21,7 +22,7 @@ const Index = () => {
           <div key={article.id}>
             <span>{moment(article.createdAt).format("MMMM DD, YYYY")}</span>
             <Link href="/articles/[slug]" as={`/articles/${article.slug}`}>
-              <a>{title(article.title)}</a>
+              <A>{title(article.title)}</A>
             </Link>
           </div>
         ))}
@@ -53,16 +54,6 @@ const Index = () => {
           text-align: right;
           margin-right: 30px;
           color: rgb(153, 153, 153);
-        }
-
-        a {
-          text-decoration: none;
-          color: #0070f3;
-        }
-
-        a:hover {
-          background: #0070f3;
-          color: white;
         }
       `}</style>
     </main>

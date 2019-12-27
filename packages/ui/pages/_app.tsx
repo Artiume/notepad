@@ -7,7 +7,7 @@ import { AuthStore } from "../store/auth"
 
 const theme = {
   colors: {
-    primary: "##070f3",
+    primary: "#0070f3",
   },
 }
 
