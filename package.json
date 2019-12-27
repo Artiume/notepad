@@ -15,6 +15,8 @@
     "start": "concurrently -n api,ui \"yarn workspace api start\" \"yarn workspace ui start\""
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
     "@yarnpkg/pnpify": "^2.0.0-rc.12",
@@ -25,6 +27,7 @@
     "eslint-loader": "^3.0.2",
     "eslint-plugin-import": "2.19.1",
     "eslint-plugin-react": "^7.17.0",
+    "husky": "^4.0.0-beta.1",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "typescript": "^3.7.4"
