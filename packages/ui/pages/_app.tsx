@@ -1,8 +1,15 @@
 import { Provider } from "mobx-react"
 import App from "next/app"
 import React from "react"
+import { ThemeProvider } from "styled-components"
 import { fetchInitialStoreState, Store } from "../store"
 import { AuthStore } from "../store/auth"
+
+const theme = {
+  colors: {
+    primary: "##070f3",
+  },
+}
 
 class MyApp extends App {
   state = {
@@ -31,7 +38,9 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Provider store={this.state.store} auth={this.state.auth}>
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </Provider>
     )
   }
