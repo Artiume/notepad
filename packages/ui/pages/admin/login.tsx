@@ -1,8 +1,11 @@
+// External
 import { observer } from "mobx-react"
 import Router from "next/router"
 import React from "react"
-import Meta from "../../components/meta"
-import { useStores } from "../../store"
+
+// Local
+import Meta from "~/components/meta"
+import { useStores } from "~/store"
 
 const Login = () => {
   const { auth } = useStores()
@@ -12,7 +15,7 @@ const Login = () => {
 
   return (
     <main>
-      <Meta />
+      <Meta title="Login" />
       <form onSubmit={e => auth.login(e)}>
         <h2>Login</h2>
 

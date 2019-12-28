@@ -5,9 +5,9 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 
 // Local
-import { fetchInitialStoreState, Store } from "../store"
-import { AuthStore } from "../store/auth"
-import { theme } from "../utils/theme"
+import { fetchInitialStoreState, Store } from "~/store"
+import { AuthStore } from "~/store/auth"
+import { theme } from "~/utils/theme"
 
 class MyApp extends App {
   state = {

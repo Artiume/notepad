@@ -3,6 +3,7 @@
   "env": { "node": true, "browser": true, "es6": true },
   "settings": { "react": { "version": "detect" } },
   "parserOptions": {
+    "project": ["./tsconfig.json", "./packages/**/tsconfig.json"],
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
@@ -31,6 +32,7 @@
     "import/no-duplicates": "error",
     "react/no-unescaped-entities": 0,
     "react/prop-types": 0,
-    "import/no-named-as-default": 0
+    "import/no-named-as-default": 0,
+    "import/no-unresolved": 0
   }
 }

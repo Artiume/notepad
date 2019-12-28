@@ -1,7 +1,10 @@
+// External
 import { observer } from "mobx-react"
 import Router from "next/router"
 import React from "react"
-import { useStores } from "../../store"
+
+// Local
+import { useStores } from "~/store"
 
 const Index = () => {
   const { auth } = useStores()

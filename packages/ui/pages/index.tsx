@@ -7,8 +7,8 @@ import styled from "styled-components"
 import * as titlelize from "title"
 
 // Local
-import { A, Main, Logo, Meta } from "../components"
-import { useStores } from "../store"
+import { A, Main, Logo, Meta } from "~/components"
+import { useStores } from "~/store"
 
 // Components
 const Date = styled.span({
