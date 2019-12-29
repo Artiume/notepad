@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components"
 
 // Local
 import { fetchInitialStoreState, Store } from "~/store"
-import { AuthStore } from "~/store/auth"
+import { fetchInitialAuthStoreState, AuthStore } from "~/store/auth"
 import { theme } from "~/utils/theme"
 
 class MyApp extends App {
@@ -18,18 +18,22 @@ class MyApp extends App {
   // Fetching serialized(JSON) store state
   static async getInitialProps(appContext) {
     const appProps = await App.getInitialProps(appContext)
+
+    // Fetch initial store states
     const initialStoreState = await fetchInitialStoreState(appContext)
+    const initialAuthStoreState = await fetchInitialAuthStoreState(appContext)
 
     return {
       ...appProps,
       initialStoreState,
+      initialAuthStoreState,
     }
   }
 
   static getDerivedStateFromProps(props, state) {
     // Hydrate stores
     state.store.hydrate(props.initialStoreState)
-    state.auth.hydrate(props.initialStoreState)
+    state.auth.hydrate(props.initialAuthStoreState)
 
     return state
   }

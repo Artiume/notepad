@@ -1,5 +1,6 @@
 // External
 import { action, computed, observable } from "mobx"
+import { NextPageContext } from "next"
 import React from "react"
 
 // Local
@@ -33,5 +34,13 @@ export class AuthStore {
       this.token = data.token
       this.error = null
     } else this.error = data.message
+  }
+}
+
+export async function fetchInitialAuthStoreState({ ctx }: { ctx: NextPageContext }) {
+  switch (ctx.pathname) {
+    default: {
+      return {}
+    }
   }
 }
