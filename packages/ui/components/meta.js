@@ -24,7 +24,7 @@ export default ({ title }) => (
       }
 
       body {
-        font: 13px Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+        font: 14px Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
           Courier New, monospace, serif;
       }
 

@@ -13,10 +13,15 @@ import { useStores } from "~/store"
 // Components
 const Date = styled.span({
   display: "inline-block",
-  width: "140px",
+  width: 160,
   textAlign: "right",
-  marginRight: 30,
+  paddingRight: 10,
   color: "rgba(153, 153, 153)",
+  "@media (max-width: 800px)": {
+    display: "flex",
+    marginBottom: "5px",
+    fontSize: "13px",
+  },
 })
 
 const Article = styled.div({
@@ -25,8 +30,15 @@ const Article = styled.div({
 
 // Page
 const Index = () => {
+  // TODO: Set based on User-Agent
+  const [innerWidth, setInnerWidth] = React.useState(800)
   const { store } = useStores()
   const { articles } = store
+
+  React.useEffect(() => {
+    window.addEventListener("resize", () => setInnerWidth(window.innerWidth))
+    setInnerWidth(window.innerWidth)
+  }, [])
 
   return (
     <Main>
@@ -44,7 +56,13 @@ const Index = () => {
             <Article key={id}>
               <Date>{moment(createdAt).format("MMMM DD, YYYY")}</Date>
               <Link href="/articles/[slug]" as={linkAs}>
-                <A>{titlelize(title)}</A>
+                <A
+                  style={{
+                    margin: innerWidth > 800 ? "10px 15px" : "0",
+                  }}
+                >
+                  {titlelize(title)}
+                </A>
               </Link>
             </Article>
           )
