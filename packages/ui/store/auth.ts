@@ -1,6 +1,8 @@
 // External
+import Cookies from "js-cookie"
 import { action, computed, observable } from "mobx"
 import { NextPageContext } from "next"
+import cookies from "next-cookies"
 import React from "react"
 
 // Local
@@ -17,7 +19,7 @@ export class AuthStore {
   }
 
   hydrate(serializedStore) {
-    this.loading = serializedStore.loading
+    this.token = serializedStore.token
   }
 
   @action handleChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -32,15 +34,23 @@ export class AuthStore {
     const data = await res.json()
     if (data.token) {
       this.token = data.token
+      Cookies.set("token", data.token)
       this.error = null
     } else this.error = data.message
   }
 }
 
 export async function fetchInitialAuthStoreState({ ctx }: { ctx: NextPageContext }) {
+  const { token } = cookies(ctx)
+
+  // Redirect if not logged in
+  if (!token && ctx.pathname !== "/admin/login") {
+    ctx.res.writeHead(302, { Location: "/admin/login" }).end()
+  }
+
   switch (ctx.pathname) {
     default: {
-      return {}
+      return { token: token ?? null }
     }
   }
 }
