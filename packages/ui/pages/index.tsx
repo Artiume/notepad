@@ -7,7 +7,7 @@ import styled from "styled-components"
 import * as titlelize from "title"
 
 // Local
-import { A, Main, Logo, Meta } from "~/components"
+import { Main, Logo, Meta } from "~/components"
 import { useStores } from "~/store"
 
 // Components
@@ -28,17 +28,24 @@ const Article = styled.div({
   margin: " 0 0 10px 0",
 })
 
+const ArticleLink = styled.a(({ theme }) => ({
+  textDecoration: "none",
+  color: theme.colors.primary,
+  margin: "10px 15px",
+  ":hover": {
+    background: theme.colors.primary,
+    color: "white",
+    cursor: "pointer",
+  },
+  "@media (max-width: 800px)": {
+    margin: 0,
+  },
+}))
+
 // Page
 const Index = () => {
-  // TODO: Set based on User-Agent
-  const [innerWidth, setInnerWidth] = React.useState(800)
   const { store } = useStores()
   const { articles } = store
-
-  React.useEffect(() => {
-    window.addEventListener("resize", () => setInnerWidth(window.innerWidth))
-    setInnerWidth(window.innerWidth)
-  }, [])
 
   return (
     <Main>
@@ -56,13 +63,7 @@ const Index = () => {
             <Article key={id}>
               <Date>{moment(createdAt).format("MMMM DD, YYYY")}</Date>
               <Link href="/articles/[slug]" as={linkAs}>
-                <A
-                  style={{
-                    margin: innerWidth > 800 ? "10px 15px" : "0",
-                  }}
-                >
-                  {titlelize(title)}
-                </A>
+                <ArticleLink>{titlelize(title)}</ArticleLink>
               </Link>
             </Article>
           )
