@@ -38,6 +38,11 @@ export class AuthStore {
       this.error = null
     } else this.error = data.message
   }
+
+  @action async logout() {
+    Cookies.remove("token")
+    this.token = null
+  }
 }
 
 export async function fetchInitialAuthStoreState({ ctx }: { ctx: NextPageContext }) {
@@ -48,6 +53,7 @@ export async function fetchInitialAuthStoreState({ ctx }: { ctx: NextPageContext
     ctx.res.writeHead(302, { Location: "/admin/login" }).end()
   }
 
+  // Return initial store state
   switch (ctx.pathname) {
     default: {
       return { token: token ?? null }
