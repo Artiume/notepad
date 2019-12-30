@@ -34,6 +34,9 @@ export class User extends Model<User> {
   @Column
   lastName!: string
 
+  @Column
+  avatar: string
+
   @Unique
   @IsEmail
   @Column

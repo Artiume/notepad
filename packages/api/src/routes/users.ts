@@ -1,6 +1,7 @@
 import { hash } from "argon2"
 import { Router } from "express"
 import { check, validationResult } from "express-validator"
+import { url as gravatar } from "gravatar"
 import { BAD_REQUEST, CREATED, OK } from "http-status-codes"
 import { v4 as uuid } from "uuid"
 
@@ -29,6 +30,7 @@ users.post(
       const user = await User.create({
         ...req.body,
         id: uuid(),
+        avatar: gravatar(req.body.email, { protocol: "https" }),
         password: await hash(req.body.password),
       })
 
