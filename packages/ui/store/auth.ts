@@ -36,6 +36,8 @@ export class AuthStore {
       this.token = data.token
       Cookies.set("token", data.token)
       this.error = null
+      this.email = ""
+      this.password = ""
     } else this.error = data.message
   }
 
