@@ -1,8 +1,10 @@
-/* eslint-disable */
-import React from "react"
-import Link from "next/link"
+// External
 import { observer } from "mobx-react"
+import Link from "next/link"
+import React from "react"
 import styled from "styled-components"
+
+// Local
 import { useStores } from "../store"
 import { A } from "./link"
 
