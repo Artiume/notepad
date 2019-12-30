@@ -48,10 +48,10 @@ export class AuthStore {
 export async function fetchInitialAuthStoreState({ ctx }: { ctx: NextPageContext }) {
   const { token } = cookies(ctx)
 
-  // Redirect if not logged in
-  if (!token && ctx.pathname !== "/admin/login") {
-    ctx.res.writeHead(302, { Location: "/admin/login" }).end()
-  }
+  // // Redirect if not logged in
+  // if (!token && ctx.pathname !== "/editor/login" && ctx.pathname.includes("editor")) {
+  //   ctx.res.writeHead(302, { Location: "/editor/login" }).end()
+  // }
 
   // Return initial store state
   switch (ctx.pathname) {

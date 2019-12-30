@@ -10,7 +10,7 @@ import { useStores } from "~/store"
 const Index = () => {
   const { auth } = useStores()
   React.useEffect(() => {
-    if (!auth.isLoggedIn) Router.push("/admin/login")
+    if (!auth.isLoggedIn) Router.push("/editor/login")
   }, [auth.isLoggedIn])
 
   return (

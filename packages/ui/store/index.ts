@@ -40,9 +40,7 @@ export async function fetchInitialStoreState({ ctx }: { ctx: NextPageContext }) 
       return { articles: [data], hostname: isServer ? ctx.req.headers.host : window.location.host }
     }
     default: {
-      const res = await articles()
-      const data = await res.json()
-      return { articles: data, hostname: isServer ? ctx.req.headers.host : window.location.host }
+      return { articles: [], hostname: "" }
     }
   }
 }

@@ -10,7 +10,7 @@ import { useStores } from "~/store"
 const Login = () => {
   const { auth } = useStores()
   React.useEffect(() => {
-    if (auth.isLoggedIn) Router.push("/admin")
+    if (auth.isLoggedIn) Router.push("/editor")
   }, [auth.isLoggedIn])
 
   return (
