@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/IoHETwA.png" height="120" />
 </p>
 
-**⚠️ Warning: Notepad is currently a Work-In-Progress (WIP), as a project of [@danteissaias](https://github.com/danteissaias). Until we release a first stable version, the project software may not actually be buildable.**
+**⚠️ Warning: Notepad is currently a Work-In-Progress (WIP), as a hobby project of [@danteissaias](https://github.com/danteissaias). Until we release the first stable version, the project software may not actually be buildable.**
 
 Notepad provides a painless interface for publishing professional articles. It exposes a minimalist user interface for editing and publishing articles using markdown formatting.
 
