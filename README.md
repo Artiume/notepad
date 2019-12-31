@@ -48,7 +48,7 @@ All endpoints that create, update or delete values require a valid `Authorizatio
 
 ## Running Notepad
 
-There are a variety of ways to run Notepad. **Warning: We are very early adopters of Yarn v2 and therefore this project is untested with both NPM and Yarn v1.**
+There are a variety of ways to run Notepad. **Warning: We are very early adopters of `yarn` version 2 and it's new `pnp` mechanism for installing modules and therefore this project is untested with both `npm` and `yarn` version 1.**
 
 ### Running Locally
 

@@ -16,11 +16,14 @@ const Date = styled.span({
   width: 160,
   textAlign: "right",
   paddingRight: 10,
-  color: "rgba(153, 153, 153)",
+  color: "rgb(119, 119, 119)",
   "@media (max-width: 800px)": {
     display: "flex",
     marginBottom: "5px",
     fontSize: "13px",
+  },
+  "@media (prefers-color-scheme: dark)": {
+    color: "rgba(150, 150, 150)",
   },
 })
 

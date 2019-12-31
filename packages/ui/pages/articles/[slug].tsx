@@ -19,6 +19,9 @@ const Byline = styled.span({
   display: "flex",
   alignItems: "center",
   color: "rgb(119, 119, 119)",
+  "@media (prefers-color-scheme: dark)": {
+    color: "rgba(150, 150, 150)"
+  }
 })
 
 const Title = styled.h1({
@@ -34,6 +37,10 @@ const Avatar = styled.img({
   border: "0.5px solid #ccc",
   borderRadius: "50%",
   marginRight: 10,
+  "@media(prefers-color-scheme: dark)": {
+    background: "#111",
+    border: "0.5px solid #333"
+  }
 })
 
 const Divider = styled.span({
@@ -84,10 +91,39 @@ const Slug: React.FC = () => {
     <Main title={article.title}>
       <Article>
         <Meta author={author} createdAt={createdAt} title={title} />
-        <div dangerouslySetInnerHTML={rendered} />
+        <div className="content" dangerouslySetInnerHTML={rendered} />
       </Article>
 
       <style jsx global>{`
+        h1 {
+          font-size: 18px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+
+        .content > h1, h2 {
+          display: block;
+          margin-bottom: 15px;
+          padding-top: 10px;
+        }
+
+        .content > h1:after, h2:after {
+          content: " ";
+          display: block;
+          width: 50px;
+          height: 1px;
+          background: #ddd;
+          margin-top: 15px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .content > h1:after, h2:after {
+            background: #444;
+          }
+        }
+
         p {
           font-size: 14px;
           line-height: 24px;
