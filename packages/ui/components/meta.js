@@ -28,6 +28,13 @@ export default ({ title }) => (
           Bitstream Vera Sans Mono, Courier New, monospace, serif;
       }
 
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: black;
+          color: white;
+        }
+      }
+
       /* loading progress bar styles */
       #nprogress {
         pointer-events: none;
