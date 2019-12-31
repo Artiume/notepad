@@ -24,8 +24,8 @@ export default ({ title }) => (
       }
 
       body {
-        font: 14px Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
-          Courier New, monospace, serif;
+        font: 14px SF Mono Powerline, SF Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+          Bitstream Vera Sans Mono, Courier New, monospace, serif;
       }
 
       /* loading progress bar styles */

@@ -8174,6 +8174,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"time-ago@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "time-ago@npm:0.2.1"
+  checksum: 18033a709685fa45811cf0ad9faa6da494a346aa492c7ffeeeb778167b6f1ec5d692d0461abd46fc7dd88b9518eb9142da0ee439abe021f26fa42a9fb92dc3ea
+  languageName: node
+  linkType: hard
+
 "timers-browserify@npm:^2.0.4":
   version: 2.0.11
   resolution: "timers-browserify@npm:2.0.11"
@@ -8421,6 +8428,7 @@ __metadata:
     remarkable: ^2.0.0
     styled-components: ^4.4.1
     styled-jsx: ^3.2.4
+    time-ago: ^0.2.1
     title: ^3.4.1
     typescript: ^3.7.3
   languageName: unknown

@@ -7,7 +7,7 @@ import styled from "styled-components"
 import * as titlelize from "title"
 
 // Local
-import { Main, Logo, Meta } from "~/components"
+import { Main } from "~/components"
 import { useStores } from "~/store"
 
 // Components
@@ -48,10 +48,7 @@ const Index = () => {
   const { articles } = store
 
   return (
-    <Main>
-      <Meta title={store.hostname} />
-      <Logo />
-
+    <Main title={store.hostname}>
       {articles
         .slice()
         .reverse()

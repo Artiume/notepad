@@ -5,28 +5,73 @@ import { useRouter } from "next/router"
 import React from "react"
 import { Remarkable } from "remarkable"
 import styled from "styled-components"
+import { ago } from "time-ago"
 import * as titleize from "title"
 
 // Local
-import { Logo, Meta, Main, Article, A } from "~/components"
+import { Main, Article, A, TimeAgo } from "~/components"
+import { User } from "~/interfaces/user"
 import { useStores } from "~/store"
 import highlight from "~/utils/highlight"
 
 // Components
-const Date = styled.span({
-  marginBottom: 20,
-  display: "block",
+const Byline = styled.span({
+  marginBottom: 25,
+  fontSize: 12.5,
+  display: "flex",
+  alignItems: "center",
   color: "rgb(119, 119, 119)",
 })
 
 const Title = styled.h1({
   font: `500 18px Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif`,
   marginTop: 0,
-  marginBottom: 10,
+  marginBottom: 15,
 })
 
+const Avatar = styled.img({
+  height: 20,
+  width: 20,
+  background: "#eee",
+  border: "0.5px solid #ccc",
+  borderRadius: "50%",
+  marginRight: 10,
+})
+
+const Divider = styled.span({
+  background: `rgba(0, 0, 0, 0) url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNLjUgMTUuNWw3LTE1IiBzdHJva2U9IiNDOEM4QzgiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIvPjwvc3ZnPg==") repeat scroll 0% 0%`,
+  width: 8,
+  height: 16,
+  marginRight: 10,
+  marginLeft: 10,
+})
+
+interface MetaProps {
+  title: string
+  author: User
+  createdAt: string
+}
+
+const Meta: React.FC<MetaProps> = ({ title, author, createdAt }) => {
+  const date = moment(createdAt).format("MMMM DD, YYYY")
+
+  return (
+    <React.Fragment>
+      <Title>
+        <A href="#">{titleize(title)}</A>
+      </Title>
+      <Byline>
+        <Avatar src={author.avatar} />
+        {author.firstName} {author.lastName} <Divider />
+        <TimeAgo date={date} long={true} />
+        <TimeAgo date={date} />
+      </Byline>
+    </React.Fragment>
+  )
+}
+
 // Page
-const Slug = () => {
+const Slug: React.FC = () => {
   // "Hooks"
   const md = new Remarkable({ highlight })
   const { store } = useStores()
@@ -34,26 +79,15 @@ const Slug = () => {
 
   // Article
   const article = store.articles.filter(article => article.slug === router.query.slug)[0]
-  const { title, content, createdAt } = article
+  const { title, author, content, createdAt } = article
 
   // Processed article
   const rendered = { __html: md.render(content) }
-  const timeFormatted = moment(createdAt).format("MMMM DD, YYYY")
-  const timeFromNow = moment(createdAt).fromNow()
 
   return (
-    <Main>
-      <Meta title={article.title} />
-      <Logo />
-
+    <Main title={article.title}>
       <Article>
-        <Title>
-          <A href="#">{titleize(title)}</A>
-        </Title>
-
-        <Date>
-          {timeFormatted} ({timeFromNow})
-        </Date>
+        <Meta author={author} createdAt={createdAt} title={title} />
         <div dangerouslySetInnerHTML={rendered} />
       </Article>
 
