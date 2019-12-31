@@ -1,11 +1,9 @@
 // External
 import { observer } from "mobx-react"
-import moment from "moment"
 import { useRouter } from "next/router"
 import React from "react"
 import { Remarkable } from "remarkable"
 import styled from "styled-components"
-import { ago } from "time-ago"
 import * as titleize from "title"
 
 // Local
@@ -53,8 +51,6 @@ interface MetaProps {
 }
 
 const Meta: React.FC<MetaProps> = ({ title, author, createdAt }) => {
-  const date = moment(createdAt).format("MMMM DD, YYYY")
-
   return (
     <React.Fragment>
       <Title>
@@ -63,8 +59,8 @@ const Meta: React.FC<MetaProps> = ({ title, author, createdAt }) => {
       <Byline>
         <Avatar src={author.avatar} />
         {author.firstName} {author.lastName} <Divider />
-        <TimeAgo date={date} long={true} />
-        <TimeAgo date={date} />
+        <TimeAgo date={createdAt} long={true} />
+        <TimeAgo date={createdAt} />
       </Byline>
     </React.Fragment>
   )
