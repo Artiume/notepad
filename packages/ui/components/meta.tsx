@@ -1,22 +1,20 @@
-/* eslint-disable */
-import React from "react"
 import Head from "next/head"
-import NProgress from "nprogress"
 import Router from "next/router"
+import NProgress from "nprogress"
+import React from "react"
 import { Styles } from "../utils/github"
 
-Router.onRouteChangeStart = () => NProgress.start()
-Router.onRouteChangeComplete = () => NProgress.done()
-Router.onRouteChangeError = () => NProgress.done()
+Router.events.on("routeChangeStart", () => NProgress.start())
+Router.events.on("routeChangeComplete", () => NProgress.done())
+Router.events.on("routeChangeError", () => NProgress.done())
 
-export default ({ title }) => (
+export const Meta = ({ title }) => (
   <div>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>{title}</title>
     </Head>
 
-    {/* global styles */}
     <style jsx global>{`
       * {
         margin: 0;
