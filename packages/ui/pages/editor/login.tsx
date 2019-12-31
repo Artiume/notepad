@@ -4,7 +4,7 @@ import Router from "next/router"
 import React from "react"
 
 // Local
-import Meta from "~/components/meta"
+import { Meta } from "~/components"
 import { useStores } from "~/store"
 
 const Login = () => {
