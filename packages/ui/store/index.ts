@@ -39,6 +39,11 @@ export async function fetchInitialStoreState({ ctx }: { ctx: NextPageContext }) 
       const data = await res.json()
       return { articles: [data], hostname: isServer ? ctx.req.headers.host : window.location.host }
     }
+    case "/editor": {
+      const res = await articles()
+      const data = await res.json()
+      return { articles: data, hostname: isServer ? ctx.req.headers.host : window.location.host }
+    }
     default: {
       return { articles: [], hostname: "" }
     }

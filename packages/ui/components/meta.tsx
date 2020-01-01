@@ -8,10 +8,12 @@ Router.events.on("routeChangeStart", () => NProgress.start())
 Router.events.on("routeChangeComplete", () => NProgress.done())
 Router.events.on("routeChangeError", () => NProgress.done())
 
-export const Meta = ({ title }) => (
+export const Meta = ({ title, description = "", author = "" }) => (
   <div>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      {description !== "" && <meta name="description" content={description} />}
+      {author !== "" && <meta name="author" content={author} />}
       <title>{title}</title>
     </Head>
 

@@ -1,4 +1,5 @@
 // External
+import description from "description"
 import { observer } from "mobx-react"
 import { useRouter } from "next/router"
 import React from "react"
@@ -83,12 +84,13 @@ const Slug: React.FC = () => {
   // Article
   const article = store.articles.filter(article => article.slug === router.query.slug)[0]
   const { title, author, content, createdAt } = article
+  const desc = description({ content, limit: 160, endWith: ["..."] })
 
   // Processed article
   const rendered = { __html: md.render(content) }
 
   return (
-    <Main title={article.title}>
+    <Main title={article.title} description={desc} author={`${author.firstName} ${author.lastName}`}>
       <Article>
         <Meta author={author} createdAt={createdAt} title={title} />
         <div className="content" dangerouslySetInnerHTML={rendered} />
@@ -122,6 +124,12 @@ const Slug: React.FC = () => {
           .content > h1:after, h2:after {
             background: #444;
           }
+        }
+
+        .content img {
+          width: 100%; 
+          margin: 20px 0;
+          border-radius: 5px;
         }
 
         p {

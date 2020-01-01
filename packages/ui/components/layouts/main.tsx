@@ -9,10 +9,17 @@ export const Wrapper = styled.div({
   },
 })
 
-export const Main: React.FC<{ title: string }> = ({ children, title }) => (
+interface MainProps {
+  title: string
+  description?: string
+  editor?: boolean
+  author?: string
+}
+
+export const Main: React.FC<MainProps> = ({ children, title, description = "", author = "", editor = false }) => (
   <Wrapper>
-    <Meta title={title} />
-    <Logo />
+    <Meta title={title} description={description} author={author} />
+    <Logo editor={editor} />
     {children}
   </Wrapper>
 )

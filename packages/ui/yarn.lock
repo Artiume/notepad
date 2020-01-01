@@ -2350,6 +2350,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"buffer-equal-constant-time@npm:1.0.1":
+  version: 1.0.1
+  resolution: "buffer-equal-constant-time@npm:1.0.1"
+  checksum: a207a4bee989c155049a81848a9ad9354a507b288680829193ebf5882c07e867912a990cf2674fd0340328b8031c1023e82768faa1791f968a01cb151a6516bd
+  languageName: node
+  linkType: hard
+
 "buffer-from@npm:^1.0.0":
   version: 1.1.1
   resolution: "buffer-from@npm:1.1.1"
@@ -3291,6 +3298,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"description@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "description@npm:0.0.4"
+  dependencies:
+    remove-markdown: ^0.2.2
+    striptags: ^3.1.1
+  checksum: 9a98ffd611178bd6b68c566f879279b829cfaba367ce772ef7e8945ed5ebb451f7182d8a37e387178f4da1a5505970bbff1e1b7a549a3d2c9be5a589d3fde62b
+  languageName: node
+  linkType: hard
+
 "destroy@npm:~1.0.4":
   version: 1.0.4
   resolution: "destroy@npm:1.0.4"
@@ -3367,6 +3384,15 @@ __metadata:
     jsbn: ~0.1.0
     safer-buffer: ^2.1.0
   checksum: 4e31135f449b97f6155426873293f9270a2c2885520ad85e700665b680354bd3c1223783f822c4ad19fbe7899a2dff33794ddd7d25d234a7529b16b999c9ed83
+  languageName: node
+  linkType: hard
+
+"ecdsa-sig-formatter@npm:1.0.11":
+  version: 1.0.11
+  resolution: "ecdsa-sig-formatter@npm:1.0.11"
+  dependencies:
+    safe-buffer: ^5.0.1
+  checksum: 12bd439cfa0d1a046a74db627f0ebfdc1c076907a057be4bf1c650476a4545c21f8c6b9d1d4f20508306d8507d6ff2d966b2aad82c547f8de694e9c73886e9e0
   languageName: node
   linkType: hard
 
@@ -4927,6 +4953,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonwebtoken@npm:^8.5.1":
+  version: 8.5.1
+  resolution: "jsonwebtoken@npm:8.5.1"
+  dependencies:
+    jws: ^3.2.2
+    lodash.includes: ^4.3.0
+    lodash.isboolean: ^3.0.3
+    lodash.isinteger: ^4.0.4
+    lodash.isnumber: ^3.0.3
+    lodash.isplainobject: ^4.0.6
+    lodash.isstring: ^4.0.1
+    lodash.once: ^4.0.0
+    ms: ^2.1.1
+    semver: ^5.6.0
+  checksum: 480de5afd902d36a91c10e414bb452fd708f42357ee28ef910e058a1ee4518a68d510ab576fcc77eb1b360b8b9b83b18e300e2c39adb0d5677d7fc4bb2b36b42
+  languageName: node
+  linkType: hard
+
 "jsprim@npm:^1.2.2":
   version: 1.4.1
   resolution: "jsprim@npm:1.4.1"
@@ -4936,6 +4980,27 @@ __metadata:
     json-schema: 0.2.3
     verror: 1.10.0
   checksum: c4afef21da19a73379df0d906b354b401db318096b0e711cc7927547b8d37788a2f7768c875d5abdfc02613cb3af0d943f4d505b9f2e28fa09d2d0d12851ff53
+  languageName: node
+  linkType: hard
+
+"jwa@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "jwa@npm:1.4.1"
+  dependencies:
+    buffer-equal-constant-time: 1.0.1
+    ecdsa-sig-formatter: 1.0.11
+    safe-buffer: ^5.0.1
+  checksum: ab22f46ac3640c5ef44ae46d9083c0a6c44e738eea2ca3da884f6c5db2ea2d31eafa11bef87e24218e082189b128580147960a087fafd68d283225cfa3667a5c
+  languageName: node
+  linkType: hard
+
+"jws@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "jws@npm:3.2.2"
+  dependencies:
+    jwa: ^1.4.1
+    safe-buffer: ^5.0.1
+  checksum: 3b885c37300e617c01f832fe5ab7025f15a4eb96d989d4a7eb1542372b950b2ff9a15fe06007b375bc856b5fd7a975862003349f496805b68f4ffbafba025c93
   languageName: node
   linkType: hard
 
@@ -5051,6 +5116,55 @@ __metadata:
   version: 4.1.1
   resolution: "lodash.curry@npm:4.1.1"
   checksum: a816cd99af9af8e0884c9075839b892a739a7bfb35755ee992108819a547f7e86be1e5162651fff0be0304f85cea2c39efd5ac0f8fe407b0418ab7d9c196955b
+  languageName: node
+  linkType: hard
+
+"lodash.includes@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "lodash.includes@npm:4.3.0"
+  checksum: ba7b1791848573a50c358b5a9fde506fe2741f38ebf327c0d2508b7656f1d19aaf960b3a26b3f69b63c6883b4b8e52737e3eb7e7dc86ab72868d5fc764875934
+  languageName: node
+  linkType: hard
+
+"lodash.isboolean@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "lodash.isboolean@npm:3.0.3"
+  checksum: bb15276ddbc2cd0901b27c4cdb64483c03c4b2b1eac64aef23a8405fdfe4a7702960eb019d08423abad6a023bde0eef9db60712478fdb7e8bf46adefe27fe010
+  languageName: node
+  linkType: hard
+
+"lodash.isinteger@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "lodash.isinteger@npm:4.0.4"
+  checksum: 7ff0e7ca9542d5188dc43560abad8e4e63078d0c51f83c010fed59e100d7094a2b49b7cb51162746f1127d2048d42dc804d2ad83afaf5bd3e6657f7d46c25deb
+  languageName: node
+  linkType: hard
+
+"lodash.isnumber@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "lodash.isnumber@npm:3.0.3"
+  checksum: e55dd2a5f19cb8da38088e1cc6645093a2d7b50e8736b6730d9eda24961f7ab1ab6cb3a4e63acb760facbbcd2966b4eb7b3b59359549d73172af0c3abc6996eb
+  languageName: node
+  linkType: hard
+
+"lodash.isplainobject@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "lodash.isplainobject@npm:4.0.6"
+  checksum: ef83a00aa56abb2f8d4f4b96571f7b3dd030df291299f3cfae80b89b69c89eb07635a1a3343f4ec145e4a59a3e1677d6140d82d518c10fd0d2e991107faf106e
+  languageName: node
+  linkType: hard
+
+"lodash.isstring@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.isstring@npm:4.0.1"
+  checksum: b56afd63a0918c2a2eb44b51a741fbec9d99e77a9dcecb1b109d3841ef40e20f74cc63d5cd764743135f202189132ad2005b09b8bb9baf8a1d8b8662134a502f
+  languageName: node
+  linkType: hard
+
+"lodash.once@npm:^4.0.0":
+  version: 4.1.1
+  resolution: "lodash.once@npm:4.1.1"
+  checksum: f3241d42213d761c952eb53662b6d78cffa476387311ac753a006ece3c4e15af295751df055573a507226a7e8e966255872843b4723256398ea351568ba1ed95
   languageName: node
   linkType: hard
 
@@ -7328,6 +7442,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remove-markdown@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "remove-markdown@npm:0.2.2"
+  checksum: 66bac7bdbda9ccc2b8c0ee8e8a8155a3a414aa25ea4a48c5ca2a9986bb53d246f350d76785d8b15eba31d3f80c7ba4132018341fb9209fde9a0f75be7daedf14
+  languageName: node
+  linkType: hard
+
 "remove-trailing-separator@npm:^1.0.1":
   version: 1.1.0
   resolution: "remove-trailing-separator@npm:1.1.0"
@@ -7993,6 +8114,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"striptags@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "striptags@npm:3.1.1"
+  checksum: bdde35c24dc820d7f72d5da27934a5598be26bf23adff7d25845327053745ea5005da36453142f523d4dab5daf0e350a325ac7339ed2cae778bbe9c07dc1d94e
+  languageName: node
+  linkType: hard
+
 "style-loader@npm:1.0.0":
   version: 1.0.0
   resolution: "style-loader@npm:1.0.0"
@@ -8411,11 +8539,13 @@ __metadata:
     "@yarnpkg/pnpify": ^2.0.0-rc.12
     babel-plugin-styled-components: ^1.10.6
     classnames: ^2.2.6
+    description: ^0.0.4
     express: ^4.17.1
     highlight.js: ^9.17.1
     http-proxy-middleware: ^0.20.0
     isomorphic-unfetch: ^3.0.0
     js-cookie: ^2.2.1
+    jsonwebtoken: ^8.5.1
     mobx: ^5.15.0
     mobx-react: ^6.1.4
     moment: ^2.24.0
