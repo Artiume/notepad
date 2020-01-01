@@ -4343,6 +4343,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"description@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "description@npm:0.0.4"
+  dependencies:
+    remove-markdown: ^0.2.2
+    striptags: ^3.1.1
+  checksum: 9a98ffd611178bd6b68c566f879279b829cfaba367ce772ef7e8945ed5ebb451f7182d8a37e387178f4da1a5505970bbff1e1b7a549a3d2c9be5a589d3fde62b
+  languageName: node
+  linkType: hard
+
 "destroy@npm:~1.0.4":
   version: 1.0.4
   resolution: "destroy@npm:1.0.4"
@@ -10049,6 +10059,13 @@ lint-staged@notepad/lint-staged:
   languageName: node
   linkType: hard
 
+"remove-markdown@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "remove-markdown@npm:0.2.2"
+  checksum: 66bac7bdbda9ccc2b8c0ee8e8a8155a3a414aa25ea4a48c5ca2a9986bb53d246f350d76785d8b15eba31d3f80c7ba4132018341fb9209fde9a0f75be7daedf14
+  languageName: node
+  linkType: hard
+
 "remove-trailing-separator@npm:^1.0.1":
   version: 1.1.0
   resolution: "remove-trailing-separator@npm:1.1.0"
@@ -11078,6 +11095,13 @@ lint-staged@notepad/lint-staged:
   languageName: node
   linkType: hard
 
+"striptags@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "striptags@npm:3.1.1"
+  checksum: bdde35c24dc820d7f72d5da27934a5598be26bf23adff7d25845327053745ea5005da36453142f523d4dab5daf0e350a325ac7339ed2cae778bbe9c07dc1d94e
+  languageName: node
+  linkType: hard
+
 "style-loader@npm:1.0.0":
   version: 1.0.0
   resolution: "style-loader@npm:1.0.0"
@@ -11629,11 +11653,13 @@ lint-staged@notepad/lint-staged:
     "@yarnpkg/pnpify": ^2.0.0-rc.12
     babel-plugin-styled-components: ^1.10.6
     classnames: ^2.2.6
+    description: ^0.0.4
     express: ^4.17.1
     highlight.js: ^9.17.1
     http-proxy-middleware: ^0.20.0
     isomorphic-unfetch: ^3.0.0
     js-cookie: ^2.2.1
+    jsonwebtoken: ^8.5.1
     mobx: ^5.15.0
     mobx-react: ^6.1.4
     moment: ^2.24.0
