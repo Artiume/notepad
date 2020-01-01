@@ -11,6 +11,7 @@ import { User } from "~/interfaces/user"
 import { login } from "~/lib/login"
 import { me } from "~/lib/me"
 
+// Auth store
 export class AuthStore {
   @observable loading = false
   @observable token = null
@@ -58,6 +59,12 @@ export class AuthStore {
   }
 }
 
+// Fetch initial auth store state
+// The output of this function is passed to hydrate().
+// This function is run on both the client and the server depending
+// on the situation. For new routes that need specific data create a new
+// case in the switch statement. If they only need the token then the
+// default case will suffice.
 export async function fetchInitialAuthStoreState({ ctx }: { ctx: NextPageContext }) {
   let { token } = cookies(ctx)
 
@@ -67,6 +74,7 @@ export async function fetchInitialAuthStoreState({ ctx }: { ctx: NextPageContext
   if (expired) token = null
 
   // Redirect if not logged in
+  // This is executed on the server on editor routes.
   if (!token && ctx.pathname !== "/editor/login" && ctx.pathname.includes("/editor")) {
     ctx.res.writeHead(302, { Location: "/editor/login" }).end()
   }
