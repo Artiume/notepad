@@ -11,7 +11,7 @@ Please ensure you do the following in order to be able to contribute to Notepad:
 
 ## Writing Code
 
-When writing code for Alles, please keep the following things in mind:
+When writing code for Notepad, please keep the following things in mind:
 
 - Write concise but readable code
 - Use semantic git commits with meaningful descriptions
