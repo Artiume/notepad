@@ -48,7 +48,7 @@ All endpoints that create, update or delete values require a valid `Authorizatio
 
 ## Running Notepad
 
-There are a variety of ways to run Notepad. **Warning: We are very early adopters of `yarn` version 2 and it's new `pnp` mechanism for installing modules and therefore this project is untested with both `npm` and `yarn` version 1.**
+There are a variety of ways to run Notepad.
 
 ### Running Locally
 
@@ -79,7 +79,7 @@ There is currently no official Notepad image on the Docker Hub. To run Notepad w
 
 ### Architecture
 
-Notepad is structured as a monorepo using yarn workspaces. The workspaces that have been configured are as follows:
+Notepad is structured as a monorepo using `yarn` workspaces, workspaces are stored in the `packages/` folder. The workspaces that have been configured are as follows:
 
 `ui` - This workspace contains all frontend code.
 

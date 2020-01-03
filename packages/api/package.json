@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.json",
-    "dev": "NODE_ENV=development yarn pnpify ts-node src/index.ts",
+    "dev": "NODE_ENV=development ts-node src/index.ts",
     "start": "node dist/index.js",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
@@ -46,7 +46,6 @@
     "@types/slug": "^0.9.1",
     "@types/uuid": "^3.4.5",
     "@types/validator": "^10.11.3",
-    "@yarnpkg/pnpify": "^2.0.0-rc.12",
     "rimraf": "^3.0.0",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4"

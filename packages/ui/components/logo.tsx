@@ -17,7 +17,7 @@ const Logo = ({ editor = false }) => {
 
   return (
     <LogoWrapper>
-      <Link href={editor ? "/editor" : ""}>
+      <Link href={editor ? "/editor" : "/"}>
         <A>
           {store.hostname}
           {editor ? "/editor" : ""}

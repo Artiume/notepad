@@ -6,10 +6,11 @@ Untitled*
 .idea
 .env
 **/.wakatime-project
+node_modules
 
 # yarn
-**/.pnp.js
-**/.yarn
+.yarn
+.pnp.js
 
 # api
 packages/api/database/

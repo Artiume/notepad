@@ -19,7 +19,6 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
-    "@yarnpkg/pnpify": "^2.0.0-rc.13",
     "concurrently": "^5.0.2",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.8.0",
