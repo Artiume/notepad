@@ -1,6 +1,7 @@
 import bodyParser from "body-parser"
 import compression from "compression"
 import express from "express"
+import rateLimit from "express-rate-limit"
 import morgan from "morgan"
 
 import { sequelize } from "./lib/sequelize"
@@ -14,6 +15,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(compression())
 app.use(morgan("dev"))
+app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 })) // 100 requests in 15 minutes
 
 app.use("/api/users", users)
 app.use("/api/auth", auth)
