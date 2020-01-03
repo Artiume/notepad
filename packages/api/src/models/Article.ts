@@ -8,9 +8,11 @@ import {
   PrimaryKey,
   Table,
   UpdatedAt,
+  HasMany,
 } from "sequelize-typescript"
 
 import { User } from "./User"
+import { View } from "./View"
 
 @Table
 export class Article extends Model<Article> {
@@ -29,10 +31,13 @@ export class Article extends Model<Article> {
   content!: string
 
   @BelongsTo(() => User)
-  author?: User
+  author!: User
 
   @ForeignKey(() => User)
-  authorId?: string
+  authorId!: string
+
+  @HasMany(() => View)
+  views!: View[]
 
   @CreatedAt
   @Column
