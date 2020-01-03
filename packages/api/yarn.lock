@@ -2613,13 +2613,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^3.7.4":
+typescript@^3.7.4:
   version: 3.7.4
   resolution: "typescript@npm:3.7.4"
   bin:
     tsc: ./bin/tsc
     tsserver: ./bin/tsserver
   checksum: b8f67d9158af24c6cae17f2ec6fddc15b45bd681a3eed1517b1b9b74f0565a4a2b12902a676e127c798081af41285db6c970ac3a2018e6c9e5e841efd7a68236
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^3.7.4#builtin<compat/typescript>":
+  version: 3.7.4
+  resolution: "typescript@patch:typescript@npm%3A3.7.4#builtin<compat/typescript>::hash=bafb4c"
+  bin:
+    tsc: ./bin/tsc
+    tsserver: ./bin/tsserver
+  checksum: 76801a625f79ee313070bf80459d54457c3f8eefeb78fa1d7d5f394f8092279faf6a637fdb15f691b42e93a7920aff52161b9dd771035fcca6251237bb390e70
   languageName: node
   linkType: hard
 
