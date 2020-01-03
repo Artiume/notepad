@@ -1226,7 +1226,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.7.2, @babel/runtime@npm:^7.0.0":
+"@babel/runtime@npm:7.7.2":
   version: 7.7.2
   resolution: "@babel/runtime@npm:7.7.2"
   dependencies:
@@ -2172,21 +2172,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/plugin-workspace-tools@npm:^2.0.0-rc.11":
-  version: 2.0.0-rc.11
-  resolution: "@yarnpkg/plugin-workspace-tools@npm:2.0.0-rc.11"
-  dependencies:
-    "@yarnpkg/fslib": ^2.0.0-rc.12
-    clipanion: ^2.1.5
-    p-limit: ^2.2.0
-    yup: ^0.27.0
-  peerDependencies:
-    "@yarnpkg/cli": ^2.0.0-rc.19
-    "@yarnpkg/core": ^2.0.0-rc.15
-  checksum: 1789d821b34b82cf9c30aa48b40946b3b56906517b3f6851c3091683e4a7e30ab946f35262df35e709c5d464589e2a4514bdcca0a752d245c8df728aabf08252
-  languageName: node
-  linkType: hard
-
 "@yarnpkg/pnpify@npm:^2.0.0-rc.12":
   version: 2.0.0-rc.12
   resolution: "@yarnpkg/pnpify@npm:2.0.0-rc.12"
@@ -2205,6 +2190,27 @@ __metadata:
   bin:
     pnpify: ./lib/cli.js
   checksum: 07c42a025dc2ad30351ee349cb737c0aee4170055a1fb7d3f901c68004f424b6ae2588f6dff13770b9f637c21dcb539866a613382710d1561717208781ce99b6
+  languageName: node
+  linkType: hard
+
+"@yarnpkg/pnpify@npm:^2.0.0-rc.13":
+  version: 2.0.0-rc.13
+  resolution: "@yarnpkg/pnpify@npm:2.0.0-rc.13"
+  dependencies:
+    "@yarnpkg/fslib": ^2.0.0-rc.12
+    comment-json: ^2.2.0
+    cross-spawn: ^6.0.5
+  peerDependencies:
+    eslint: "*"
+    typescript: "*"
+  peerDependenciesMeta:
+    eslint:
+      optional: true
+    typescript:
+      optional: true
+  bin:
+    pnpify: ./lib/cli.js
+  checksum: 6d604306f2d0d4a269b32f04aff8769fe49e1924c816ebcc82f7abedc374c991272cfdc5be1546bf6aeafd8466fdde0cc8268bcf25586095dfb3697a29248e2d
   languageName: node
   linkType: hard
 
@@ -3519,15 +3525,6 @@ __metadata:
   version: 2.2.0
   resolution: "cli-width@npm:2.2.0"
   checksum: 2d7814cb2f23e9c70a3db5f68e927d942eb6e42dbfc9ad5bb45c82a4c133bd0b53ce4f8f370f11915ccdc2ec00fb6b255c1f2bbf8b1935b45a451dea502a4b68
-  languageName: node
-  linkType: hard
-
-"clipanion@npm:^2.1.5":
-  version: 2.1.5
-  resolution: "clipanion@npm:2.1.5"
-  dependencies:
-    chalk: ^2.4.2
-  checksum: 856e21a3215f5d8696ccfbf663a9b333e149131a91f7906211e55273ef26ed8de339eb4c98a030a641326dce548b7fca52f03837fdc4b6509bb89001879d2f37
   languageName: node
   linkType: hard
 
@@ -5393,13 +5390,6 @@ __metadata:
     inherits: ^2.0.3
     readable-stream: ^2.3.6
   checksum: aba85b2d01b9aa4b80f07d47658992454dd8b8ffb5045b09bc9b8e9e90631117570a8653c6c1394ea817c2159dfced6f1dd184e86cd0475876a9224f3120e647
-  languageName: node
-  linkType: hard
-
-"fn-name@npm:~2.0.1":
-  version: 2.0.1
-  resolution: "fn-name@npm:2.0.1"
-  checksum: aa49fe2a55d313f51353999654f824b59beecea31e41a4a333592acc173db6c551d7396fb8e1d5bbdb3ae0c21112729b5dc057988debcf45ae679ca984c2dfdb
   languageName: node
   linkType: hard
 
@@ -8285,8 +8275,7 @@ lint-staged@notepad/lint-staged:
     "@commitlint/config-conventional": ^8.2.0
     "@typescript-eslint/eslint-plugin": ^2.9.0
     "@typescript-eslint/parser": ^2.9.0
-    "@yarnpkg/plugin-workspace-tools": ^2.0.0-rc.11
-    "@yarnpkg/pnpify": ^2.0.0-rc.12
+    "@yarnpkg/pnpify": ^2.0.0-rc.13
     concurrently: ^5.0.2
     eslint: ^6.7.2
     eslint-config-prettier: ^6.8.0
@@ -9611,13 +9600,6 @@ lint-staged@notepad/lint-staged:
     object-assign: ^4.1.1
     react-is: ^16.8.1
   checksum: da88f65dc9f16e6bbe1428b5ccdd2c1dbb912a3bb8ef76f3637f2ebd073fa620f66be91a3ce6700ca792e7c17d7b3b0f123ac76e1212ebda7c8329edcdc860d4
-  languageName: node
-  linkType: hard
-
-"property-expr@npm:^1.5.0":
-  version: 1.5.1
-  resolution: "property-expr@npm:1.5.1"
-  checksum: 21ddc2d893ac3d67a2fae5a29444f67b098e2a5073d6c2b621e24e4b19e263297db6b028f399cee81cc77ca19be6f5f016aecfdf6fe377022584b210e79fe22b
   languageName: node
   linkType: hard
 
@@ -11269,13 +11251,6 @@ lint-staged@notepad/lint-staged:
   languageName: node
   linkType: hard
 
-"synchronous-promise@npm:^2.0.6":
-  version: 2.0.10
-  resolution: "synchronous-promise@npm:2.0.10"
-  checksum: 8d20e6bf75978f0f2946d9af9eeed4d98bbf1eda5ce4a5997d2a780fbd3842d4c9f270af62b6edcc7f61ce874db9e46b59e643d6b93eb003e76d1647e98fc78a
-  languageName: node
-  linkType: hard
-
 "table@npm:^5.2.3":
   version: 5.4.6
   resolution: "table@npm:5.4.6"
@@ -11522,13 +11497,6 @@ lint-staged@notepad/lint-staged:
   version: 1.0.1
   resolution: "toposort-class@npm:1.0.1"
   checksum: bc9c34a4a5c288658c8833dce39836e6543185ece85e9149b0f07f763031ec2754012794229e4f955b931b3b317b73e6edd98ae8d62425d756d789d38a2766ce
-  languageName: node
-  linkType: hard
-
-"toposort@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "toposort@npm:2.0.2"
-  checksum: f19b8a27a31d31c02904f9355c88e48ab5c9735544729ba0a57ff92d51b32f7bcd8d8f174aebf24eb6f8d065837a035ea01c2c29a586f7c3aa454513f53969b8
   languageName: node
   linkType: hard
 
@@ -12405,19 +12373,5 @@ lint-staged@notepad/lint-staged:
   version: 3.1.1
   resolution: "yn@npm:3.1.1"
   checksum: e06491e44f4f86b1ff20cb1105ae34c7a72fbf0128eb88210f40744ae70812dc2225553edc3b180ac820529e3da1446abff51f687717ae2878dd5ab060c7df1f
-  languageName: node
-  linkType: hard
-
-"yup@npm:^0.27.0":
-  version: 0.27.0
-  resolution: "yup@npm:0.27.0"
-  dependencies:
-    "@babel/runtime": ^7.0.0
-    fn-name: ~2.0.1
-    lodash: ^4.17.11
-    property-expr: ^1.5.0
-    synchronous-promise: ^2.0.6
-    toposort: ^2.0.2
-  checksum: b0665a3aeae5d256e09872534aa8e331ce2f16f386c657e0bbff5c1ece21dc40e9f5bd9b3d9149d0f8ad2920685b22bc537dd0327655f381061544ec8566396f
   languageName: node
   linkType: hard
