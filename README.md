@@ -10,7 +10,9 @@ Notepad is written in NodeJS and is extremely efficient. It's lightweight and ca
 
 Furthermore, it provides a minimalist interface for viewing your articles (and of course it has a built in dark mode):
 
-![screenshot](https://i.imgur.com/3IHAUuK.png)
+![screenshot](https://i.imgur.com/fQ8mK1e.png)
+
+![dark mode screenshot](https://i.imgur.com/Nxgh0Hl.png)
 
 ## API
 
