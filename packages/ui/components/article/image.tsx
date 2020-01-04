@@ -23,8 +23,31 @@ export const Image = ({ width, src, alt }) => (
       }
 
       figure {
-        margin: 15px 0;
+        margin: 60px 0 50px;
         display: inline-block;
+        position: relative;
+      }
+
+      figure:before {
+        content: " ";
+        width: 1000%;
+        height: calc(100% + 80px);
+        display: block;
+        position: absolute;
+        left: -1000px;
+        z-index: -1;
+        margin-top: ${alt ? "-48px" : "-45px"};
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        background: #f9f9f9;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        figure:before {
+          border-top: 1px solid #333;
+          border-bottom: 1px solid #333;
+          background: #111;
+        }
       }
 
       figcaption {

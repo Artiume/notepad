@@ -23,6 +23,10 @@ export const Meta = ({ title, description = "", author = "" }) => (
         box-sizing: border-box;
       }
 
+      html {
+        overflow-x: hidden;
+      }
+
       body {
         font: 14px SF Mono Powerline, SF Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
           Bitstream Vera Sans Mono, Courier New, monospace, serif;
