@@ -3,30 +3,30 @@ import description from "description"
 import { observer } from "mobx-react"
 import { useRouter } from "next/router"
 import React from "react"
-import { Remarkable } from "remarkable"
+import ReactMarkdown from "react-markdown"
 import styled from "styled-components"
 import * as titleize from "title"
 
 // Local
 import { Main, Article, A, TimeAgo } from "~/components"
+import { Heading, Paragraph, Image } from "~/components/article"
 import { User } from "~/interfaces/user"
 import { useStores } from "~/store"
-import highlight from "~/utils/highlight"
 
 // Components
 const Byline = styled.span({
   marginBottom: 25,
-  fontSize: 12.5,
+  fontSize: 14,
   display: "flex",
   alignItems: "center",
   color: "rgb(119, 119, 119)",
   "@media (prefers-color-scheme: dark)": {
-    color: "rgba(150, 150, 150)"
-  }
+    color: "rgba(150, 150, 150)",
+  },
 })
 
 const Title = styled.h1({
-  font: `500 18px Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif`,
+  font: `500 22px Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif`,
   marginTop: 0,
   marginBottom: 15,
 })
@@ -40,8 +40,8 @@ const Avatar = styled.img({
   marginRight: 10,
   "@media(prefers-color-scheme: dark)": {
     background: "#111",
-    border: "0.5px solid #333"
-  }
+    border: "0.5px solid #333",
+  },
 })
 
 const Divider = styled.span({
@@ -77,7 +77,6 @@ const Meta: React.FC<MetaProps> = ({ title, author, createdAt }) => {
 // Page
 const Slug: React.FC = () => {
   // "Hooks"
-  const md = new Remarkable({ highlight })
   const { store } = useStores()
   const router = useRouter()
 
@@ -86,62 +85,19 @@ const Slug: React.FC = () => {
   const { title, author, content, createdAt } = article
   const desc = description({ content, limit: 160, endWith: ["..."] })
 
-  // Processed article
-  const rendered = { __html: md.render(content) }
-
   return (
     <Main title={article.title} description={desc} author={`${author.firstName} ${author.lastName}`}>
       <Article>
         <Meta author={author} createdAt={createdAt} title={title} />
-        <div className="content" dangerouslySetInnerHTML={rendered} />
+        <ReactMarkdown
+          className="content"
+          source={content}
+          renderers={{ heading: Heading, paragraph: Paragraph, image: Image }}
+        />
       </Article>
-
       <style jsx global>{`
-        h1 {
-          font-size: 18px;
-        }
-
-        h2 {
-          font-size: 16px;
-        }
-
-        .content > h1, h2 {
-          display: block;
-          margin-bottom: 15px;
-          padding-top: 10px;
-        }
-
-        .content > h1:after, h2:after {
-          content: " ";
-          display: block;
-          width: 50px;
-          height: 1px;
-          background: #ddd;
-          margin-top: 15px;
-        }
-
-        @media (prefers-color-scheme: dark) {
-          .content > h1:after, h2:after {
-            background: #444;
-          }
-        }
-
-        .content img {
-          width: 100%; 
-          margin: 20px 0;
-          border-radius: 5px;
-        }
-
-        p {
-          font-size: 14px;
-          line-height: 24px;
-          margin-bottom: 20px;
-        }
-
-        pre {
-          line-height: 20px;
-          margin-bottom: 20px;
-          font-size: 12px;
+        .content {
+          font: 18px Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif;
         }
       `}</style>
     </Main>

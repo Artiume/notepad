@@ -8,9 +8,9 @@ Notepad provides a painless interface for publishing professional articles. It e
 
 Notepad is written in NodeJS and is extremely efficient. It's lightweight and can be installed with a few commands on **all** server environments through the power of Docker.
 
-Furthermore, it provides a minimalist interface for viewing your articles:
+Furthermore, it provides a minimalist interface for viewing your articles (and of course it has a built in dark mode):
 
-![screenshot](https://i.imgur.com/tjmv7jg.png)
+![screenshot](https://i.imgur.com/3IHAUuK.png)
 
 ## API
 
