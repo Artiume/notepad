@@ -9,7 +9,7 @@ import * as titleize from "title"
 
 // Local
 import { Main, Article, A, TimeAgo } from "~/components"
-import { Heading, Paragraph, Image } from "~/components/article"
+import { Heading, Paragraph, Image, List } from "~/components/article"
 import { User } from "~/interfaces/user"
 import { useStores } from "~/store"
 
@@ -92,12 +92,14 @@ const Slug: React.FC = () => {
         <ReactMarkdown
           className="content"
           source={content}
-          renderers={{ heading: Heading, paragraph: Paragraph, image: Image }}
+          renderers={{ heading: Heading, paragraph: Paragraph, image: Image, list: List }}
         />
       </Article>
       <style jsx global>{`
         .content {
-          font: 18px Helvetica Neue, Helvetica, Arial, "Lucida Grande", sans-serif;
+          font: 18px -apple-system, BlinkMacSystemFont, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
         }
       `}</style>
     </Main>
