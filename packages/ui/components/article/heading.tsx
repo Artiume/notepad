@@ -15,7 +15,7 @@ export const H = level =>
   }))
 
 export const Heading = ({ level, children }) => {
-  const text = children[0].props.value
+  const text = children[0].props.value.toLowerCase()
   const id = slug(text)
   const Element = H(level)
 
