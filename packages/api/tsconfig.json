@@ -4,8 +4,9 @@
     "outDir": "./dist",
     "module": "commonjs",
     "target": "es6",
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "noEmit": false
   },
-  "include": ["src/**/*.ts"],
+  "include": ["./src/**/*.ts"],
   "exclude": ["test"]
 }
