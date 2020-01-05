@@ -13,14 +13,14 @@ import { useStores } from "~/store"
 // Components
 const Date = styled.span({
   display: "inline-block",
-  width: 160,
+  width: 150,
   textAlign: "right",
   paddingRight: 10,
   color: "rgb(119, 119, 119)",
   "@media (max-width: 800px)": {
     display: "flex",
     marginBottom: "5px",
-    fontSize: "13px",
+    fontSize: "12px",
   },
   "@media (prefers-color-scheme: dark)": {
     color: "rgba(150, 150, 150)",
@@ -28,13 +28,16 @@ const Date = styled.span({
 })
 
 const Article = styled.div({
-  margin: " 0 0 10px 0",
+  margin: "0 0 10px 0",
+  "@media (max-width: 800px)": {
+    margin: "0 0 20px 0",
+  },
 })
 
 const ArticleLink = styled.a(({ theme }) => ({
   textDecoration: "none",
   color: theme.colors.primary,
-  margin: "10px 15px",
+  margin: "10px 15px 10px 10px",
   ":hover": {
     background: theme.colors.primary,
     color: "white",
