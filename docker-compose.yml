@@ -1,0 +1,8 @@
+version: "3.4"
+
+services:
+  api:
+    build: .
+    container_name: "notepad"
+    port:
+      - "8080:8080"
