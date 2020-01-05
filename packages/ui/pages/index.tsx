@@ -65,7 +65,7 @@ const Index = () => {
           return (
             <Article key={id}>
               <Date>{moment(createdAt).format("MMMM DD, YYYY")}</Date>
-              <Link href="/articles/[slug]" as={linkAs}>
+              <Link href="/articles/[slug]" as={linkAs} passHref>
                 <ArticleLink>{titlelize(title)}</ArticleLink>
               </Link>
             </Article>
